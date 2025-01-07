@@ -21,7 +21,7 @@ export default function RootLayout({
           <div className="px-2 xsm:px-4 xxl:px-8 bg-red-200 h-screen">
             <LeftBar />
           </div>
-          <div className="flex-1 lg:min-w-[600px] border-x-[1px] border-gray-100 bg-green-200 h-screen">
+          <div className="flex-1 lg:min-w-[600px] border-x-[1px] border-borderGray">
             {" "}
             {children}
           </div>
