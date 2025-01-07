@@ -46,18 +46,12 @@ const menuList = [
   },
   {
     id: 8,
-    name: "Premium",
-    link: "/",
-    icon: "logo.svg",
-  },
-  {
-    id: 9,
     name: "Profile",
     link: "/",
     icon: "profile.svg",
   },
   {
-    id: 10,
+    id: 9,
     name: "More",
     link: "/",
     icon: "more.svg",
@@ -66,9 +60,9 @@ const menuList = [
 
 const LeftBar = () => {
   return (
-    <div className="min-h-fit sticky  top-0 flex flex-col gap-8 justify-between pt-2 pb-6">
+    <div className="min-h-fit sticky  top-0 flex flex-col gap-6 justify-between pt-2 pb-6">
       {/* LOGO MENU BUTTON */}
-      <div className="flex flex-col gap-4 text-lg items-center xxl:items-start">
+      <div className="flex flex-col gap-3 text-lg items-center xxl:items-start">
         {/* LOGO */}
         <Link href="/" className="p-2 rounded-full hover:bg-[#181818] ">
           <Image path="icons/logo.svg" alt="logo" w={24} h={24} />
