@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import Image from "./Image";
 import NextImage from "next/image";
 import { shareAction } from "@/actions/actions";
+import ImageEditor from "./ImageEditor";
 
 export default function Share() {
   const [media, setMedia] = useState<File | null>(null);
-  const [isEditorOpen, setIsEditorOpen] = useState<File | null>(null);
+  const [isEditorOpen, setIsEditorOpen] = useState(false);
 
   const handleMediaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -36,6 +37,12 @@ export default function Share() {
               Edit
             </div>
           </div>
+        )}
+        {isEditorOpen && (
+          <ImageEditor
+            previewUrl={previewURL!}
+            onClose={() => setIsEditorOpen(false)}
+          />
         )}
         <div className="flex items-center justify-between gap-4 flex-wrap">
           <div className="flex gap-4 flex-wrap">
