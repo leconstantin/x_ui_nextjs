@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "./Image";
+import { shareAction } from "@/actions/actions";
 
 export default function Share() {
   const [media, setMedia] = useState<File | null>(null);
@@ -10,7 +11,7 @@ export default function Share() {
     }
   };
   return (
-    <form action={} className="p-4 flex gap-4">
+    <form action={shareAction} className="p-4 flex gap-4">
       {/* AVATAR */}
       <div className="relative w-10 h-10 rounded-full overflow-hidden">
         <Image path="general/avatar.png" alt="" w={100} h={100} tr={true} />
